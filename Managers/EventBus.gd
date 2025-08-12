@@ -4,6 +4,9 @@ extends Node
 # Event names are StringName; payloads are Variant (any type).
 # Listeners are stored as weak references to prevent leaks/crashes.
 
+signal modifier_changed(unit_id, key)
+signal modifiers_cleared(unit_id)
+
 # event_name -> Array[Dictionary]:
 #   { "ref": WeakRef, "method": String, "deferred": bool }
 var _listeners: Dictionary = {}
