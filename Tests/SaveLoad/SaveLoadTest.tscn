@@ -1,0 +1,50 @@
+[gd_scene load_steps=2 format=3 uid="uid://xpkp560j2gq5"]
+
+[ext_resource type="Script" uid="uid://c3adbh8s3hoq" path="res://Tests/SaveLoad/SaveLoadTest.gd" id="1_7qk4j"]
+
+[node name="Node" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7qk4j")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BtnQuickSave" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Quick Save"
+
+[node name="BtnQuickLoad" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Quick Load"
+
+[node name="BtnListSlots" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "List Slots"
+
+[node name="BtnDeleteQuick" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Delete \"quick\""
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="BtnEmitTurnEnded" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Emit turn_ended (autosave)"
+
+[node name="HSeparator2" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="LblLog" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Log..."

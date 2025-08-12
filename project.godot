@@ -18,3 +18,4 @@ config/icon="res://icon.svg"
 
 EventBus="*res://managers/EventBus.gd"
 DataRegistry="*res://Managers/DataRegistry.gd"
+SaveLoadService="*res://managers/SaveLoadService.gd"
