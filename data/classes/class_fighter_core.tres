@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="GenericDataStub" load_steps=2 format=3 uid="uid://c1ki2f7xod2di"]
+
+[ext_resource type="Script" uid="uid://dm07nvdgjdsmh" path="res://data/GenericDataStub.gd" id="1_n7dq2"]
+
+[resource]
+script = ExtResource("1_n7dq2")
+id = "class_fighter_core"
+name = "Fighter Core"
+tags = Array[String](["fighter", "progression"])
+metadata/_custom_type_script = "uid://dm07nvdgjdsmh"

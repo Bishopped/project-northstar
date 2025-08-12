@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="GenericDataStub" load_steps=2 format=3 uid="uid://pvqyxr1vkg55"]
+
+[ext_resource type="Script" uid="uid://dm07nvdgjdsmh" path="res://data/GenericDataStub.gd" id="1_aq4kl"]
+
+[resource]
+script = ExtResource("1_aq4kl")
+id = "spell_bless_stub"
+name = "Bless (Stub)"
+tags = Array[String](["spell", "buff"])
+metadata/_custom_type_script = "uid://dm07nvdgjdsmh"

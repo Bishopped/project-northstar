@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="GenericDataStub" load_steps=2 format=3 uid="uid://ddl4ctbiuxq28"]
+
+[ext_resource type="Script" uid="uid://dm07nvdgjdsmh" path="res://data/GenericDataStub.gd" id="1_oclnu"]
+
+[resource]
+script = ExtResource("1_oclnu")
+id = "cond_prone_stub"
+name = "Prone (Stub)"
+tags = Array[String](["condition"])
+metadata/_custom_type_script = "uid://dm07nvdgjdsmh"

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="GenericDataStub" load_steps=2 format=3 uid="uid://cewjuxn2mx3fw"]
+
+[ext_resource type="Script" uid="uid://dm07nvdgjdsmh" path="res://data/GenericDataStub.gd" id="1_bl430"]
+
+[resource]
+script = ExtResource("1_bl430")
+id = "enc_small_room_2goblins"
+name = "Small Room - 2 Goblins"
+tags = Array[String](["level1", "skirmish"])
+metadata/_custom_type_script = "uid://dm07nvdgjdsmh"

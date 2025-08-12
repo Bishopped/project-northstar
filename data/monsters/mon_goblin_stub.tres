@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="GenericDataStub" load_steps=2 format=3 uid="uid://cr3esb7pg2p04"]
+
+[ext_resource type="Script" uid="uid://dm07nvdgjdsmh" path="res://data/GenericDataStub.gd" id="1_kv2u2"]
+
+[resource]
+script = ExtResource("1_kv2u2")
+id = "mon_goblin_stub"
+name = "Goblin (Stub)"
+tags = Array[String](["goblin", "humanoid"])
+metadata/_custom_type_script = "uid://dm07nvdgjdsmh"

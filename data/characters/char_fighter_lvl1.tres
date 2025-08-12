@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="GenericDataStub" load_steps=2 format=3 uid="uid://bglfxlbp3vg8r"]
+
+[ext_resource type="Script" uid="uid://dm07nvdgjdsmh" path="res://data/GenericDataStub.gd" id="1_kkavp"]
+
+[resource]
+script = ExtResource("1_kkavp")
+id = "char_fighter_lvl1"
+name = "Fighter L1 Template"
+tags = Array[String](["fighter", "template"])
+metadata/_custom_type_script = "uid://dm07nvdgjdsmh"

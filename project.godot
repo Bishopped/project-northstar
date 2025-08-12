@@ -10,10 +10,11 @@ config_version=5
 
 [application]
 
-config/name="New Game Project"
+config/name="Project Northstar"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-EventBus="*res://Managers/EventBus.gd"
+EventBus="*res://managers/EventBus.gd"
+DataRegistry="*res://Managers/DataRegistry.gd"

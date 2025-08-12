@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="GenericDataStub" load_steps=2 format=3 uid="uid://ci8ns07f2vxca"]
+
+[ext_resource type="Script" uid="uid://dm07nvdgjdsmh" path="res://data/GenericDataStub.gd" id="1_2xuxw"]
+
+[resource]
+script = ExtResource("1_2xuxw")
+id = "attack_melee_basic"
+name = "Basic Melee Attack"
+tags = Array[String](["melee", "attack"])
+metadata/_custom_type_script = "uid://dm07nvdgjdsmh"
