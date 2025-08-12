@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://xt0sie04o1rb"]
 
-[ext_resource type="Script" uid="uid://dspwpdsqm4rst" path="res://tests/ModifierSystem/modifier_system_test.gd" id="1_a86oh"]
+[ext_resource type="Script" uid="uid://blf02hj5xusjo" path="res://systems/ModifierSystem.gd" id="1_a86oh"]
 
 [node name="ModifierSystem" type="Node"]
 script = ExtResource("1_a86oh")

@@ -135,7 +135,6 @@ func _load_all_catalogs() -> void:
 		_load_catalog(kind)
 	# Summary log
 	var counts := _build_counts_payload()
-	print("[DataRegistry] Loaded catalogs:", counts)
 
 func _load_catalog(kind : String) -> void:
 	var dir_path : String = DIRS[kind]

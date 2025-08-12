@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://s8suqdlxh1gb"]
+
+[ext_resource type="Script" uid="uid://invricxy7moc" path="res://tests/RollTest/roll_test.gd" id="1_2iekr"]
+[ext_resource type="Script" uid="uid://ckeybnkdw87g2" path="res://systems/RollService.gd" id="1_w5b3r"]
+[ext_resource type="PackedScene" uid="uid://xt0sie04o1rb" path="res://tests/ModifierSystem/ModifierSystem.tscn" id="3_nbsbk"]
+
+[node name="RollTest" type="Node"]
+script = ExtResource("1_2iekr")
+
+[node name="ModifierSystem" parent="." instance=ExtResource("3_nbsbk")]
+
+[node name="RollService" type="Node" parent="."]
+script = ExtResource("1_w5b3r")

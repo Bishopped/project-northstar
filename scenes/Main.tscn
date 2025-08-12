@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://byh3n83v6h15b"]
+
+[ext_resource type="Script" uid="uid://ckeybnkdw87g2" path="res://systems/RollService.gd" id="1_elqb8"]
+[ext_resource type="Script" uid="uid://cco5djh2krgw8" path="res://systems/systems.gd" id="1_rvslj"]
+
+[node name="Main" type="Node"]
+
+[node name="Systems" type="Node" parent="."]
+script = ExtResource("1_rvslj")
+
+[node name="RollService" type="Node" parent="Systems"]
+unique_name_in_owner = true
+script = ExtResource("1_elqb8")

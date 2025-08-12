@@ -70,6 +70,15 @@ func add_modifier(unit_id : String, key : String, src : Dictionary) -> void:
 	if entry.is_empty():
 		return
 
+	# ── Normalize ADV/DIS to canonical keys: "advantage:<key>" / "disadvantage:<key>" ──
+	if entry.has("op") and typeof(entry["op"]) == TYPE_STRING:
+		var op_str: String = str(entry["op"])
+		if op_str == OP_ADV or op_str == OP_DIS:
+			var is_canonical: bool = key.begins_with("advantage:") or key.begins_with("disadvantage:")
+			if not is_canonical:
+				key = ("advantage:%s" % key) if op_str == OP_ADV else ("disadvantage:%s" % key)
+	# ─────────────────────────────────────────────────────────────────────────
+
 	if not _data.has(unit_id):
 		_data[unit_id] = {}
 	if not _data[unit_id].has(key):
@@ -169,34 +178,37 @@ func get_total(unit_id : String, key : String, default_value : float = 0.0) -> f
 
 	return total
 
-func get_advantage(unit_id : String, key : String) -> int:
-	# Returns -1 (disadvantage), 0 (neutral), +1 (advantage)
-	# We expect the storage key to be "advantage:<key>"
-	var adv_key : String = "advantage:%s" % key
-	if not _data.has(unit_id) or not _data[unit_id].has(adv_key):
+func get_advantage(unit_id: String, key: String) -> int:
+	# Returns -1 (disadvantage), 0 (neutral), +1 (advantage).
+	# Accept either base ("attack") or canonical ("advantage:attack") input.
+	if not _data.has(unit_id):
 		return 0
 
-	var list : Array = _data[unit_id][adv_key]
-	var adv_count : int = 0
-	var dis_count : int = 0
+	# De-prefix if caller passed canonical
+	if key.begins_with("advantage:"):
+		key = key.substr(11)	# strip "advantage:"
+	elif key.begins_with("disadvantage:"):
+		key = key.substr(14)	# strip "disadvantage:"
+
+	var adv_key: String = "advantage:%s" % key
+	if not _data[unit_id].has(adv_key):
+		return 0
+
+	var list: Array = _data[unit_id][adv_key]
+	var adv_count: int = 0
+	var dis_count: int = 0
 
 	for entry in list:
 		if not _entry_applies(entry):
 			continue
-		var op : String = str(entry.get("op", ""))
+		var op: String = str(entry.get("op", ""))
 		match op:
 			OP_ADV:
 				adv_count += 1
 			OP_DIS:
 				dis_count += 1
-			_:
-				pass
 
-	if adv_count > dis_count:
-		return 1
-	elif dis_count > adv_count:
-		return -1
-	return 0
+	return 1 if adv_count > dis_count else (-1 if dis_count > adv_count else 0)
 
 func has_resistance(unit_id : String, dmg_type : String) -> bool:
 	# Immunity > Resistance > Vulnerability. This checks resistance only; callers should handle the full hierarchy
