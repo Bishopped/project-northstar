@@ -14,6 +14,8 @@ radius = 0.6
 
 [node name="EntityRoot" type="Node3D"]
 script = ExtResource("1_0syyj")
+unit_id = null
+team = null
 
 [node name="Body" type="CharacterBody3D" parent="."]
 

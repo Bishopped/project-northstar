@@ -1,11 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dhonu5bruwtly"]
+[gd_scene load_steps=3 format=3 uid="uid://dhonu5bruwtly"]
 
-[ext_resource type="Script" uid="uid://kjse165d0mqh" path="res://tests/EntityScene/statblock_smoke_test.gd" id="1_1lpmu"]
 [ext_resource type="PackedScene" uid="uid://cysgnuv4uko42" path="res://core/entity/EntityRoot.tscn" id="1_hwhc6"]
 [ext_resource type="Script" uid="uid://oujfn5gd526x" path="res://tests/EntityScene/roster_smoke_test.gd" id="2_vvun2"]
 
 [node name="TestEntityScene" type="Node3D"]
-script = ExtResource("1_1lpmu")
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 
