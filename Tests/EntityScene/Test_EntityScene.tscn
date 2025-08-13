@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhonu5bruwtly"]
+
+[ext_resource type="PackedScene" uid="uid://cysgnuv4uko42" path="res://core/entity/EntityRoot.tscn" id="1_hwhc6"]
+[ext_resource type="Script" uid="uid://oujfn5gd526x" path="res://tests/EntityScene/roster_smoke_test.gd" id="2_vvun2"]
+
+[node name="TestEntityScene" type="Node3D"]
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+
+[node name="Hero_A" parent="." instance=ExtResource("1_hwhc6")]
+unit_id = "hero1"
+team = "party"
+
+[node name="Goblin_A" parent="." instance=ExtResource("1_hwhc6")]
+unit_id = "gob1"
+team = "enemy"
+
+[node name="RosterTestRunner" type="Node" parent="."]
+script = ExtResource("2_vvun2")
